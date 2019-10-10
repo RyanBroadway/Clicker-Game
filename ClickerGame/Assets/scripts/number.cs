@@ -5,7 +5,8 @@ using UnityEngine;
 
 public class number : MonoBehaviour
 {
-    int click = 0;
+    private int click = 0;
+    private bool Spam = false;
 
     public void Start()
     {
@@ -14,11 +15,19 @@ public class number : MonoBehaviour
 
     public void Onclick()
     {
-        click = click + 1;
-        
+        if (Spam == false)
+        {
+            Spam = true;
+            StartCoroutine(Timer());
+        }
     }
 
-    // Update is called once per frame
+    IEnumerator Timer()
+    {
+        click = click + 1;
+        yield return new WaitForSeconds(0.05f);
+        Spam = false;
+    }
     public void Update()
     {
         GetComponent<TextMeshProUGUI>().text = click.ToString();
