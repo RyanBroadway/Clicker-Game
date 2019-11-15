@@ -8,6 +8,7 @@ public class Number : MonoBehaviour
     private int Numbers = 0;
     private bool Spam = false;
     private int amount = 1;
+    public double UBNL = 0;
 
     public void Start()
     {
@@ -28,6 +29,7 @@ public class Number : MonoBehaviour
         {
             amount += 1;
             Numbers -= 50;
+            UBNL = (50 * 1.5^(amount - 1));
         }
     }
     IEnumerator Timer()

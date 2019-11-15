@@ -450,7 +450,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 84346.49, z: -3.5672053e+16, w: 3.7413234e-38}
+  m_BoundingSphereOverride: {x: 0.038925536, y: -7.083376e+14, z: 3.6269752e-38, w: 5.992e-42}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -629,6 +629,7 @@ GameObject:
   - component: {fileID: 1566570719}
   - component: {fileID: 1566570718}
   - component: {fileID: 1566570717}
+  - component: {fileID: 1566570720}
   m_Layer: 5
   m_Name: Numbers_upgrade
   m_TagString: Untagged
@@ -710,6 +711,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1566570720}
+        m_MethodName: SetTest
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1566570718
@@ -750,6 +762,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1566570715}
   m_CullTransparentMesh: 0
+--- !u!114 &1566570720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1566570715}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e74a6aebff5ca3f4f8afb30b57ebf39c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1655437555
 GameObject:
   m_ObjectHideFlags: 0
