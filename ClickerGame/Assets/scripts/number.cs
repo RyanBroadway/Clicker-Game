@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class number : MonoBehaviour
+public class Number : MonoBehaviour
 {
-    private int click = 0;
+    private int Numbers = 0;
     private bool Spam = false;
+    private int amount = 1;
 
     public void Start()
     {
@@ -21,15 +22,22 @@ public class number : MonoBehaviour
             StartCoroutine(Timer());
         }
     }
-
+    public void OnclickU()
+    {
+        if (Numbers >= 50)
+        {
+            amount += 1;
+            Numbers -= 50;
+        }
+    }
     IEnumerator Timer()
     {
-        click = click + 1;
+        Numbers = Numbers + amount;
         yield return new WaitForSeconds(0.05f);
         Spam = false;
     }
     public void Update()
     {
-        GetComponent<TextMeshProUGUI>().text = click.ToString();
+        GetComponent<TextMeshProUGUI>().text = Numbers.ToString();
     }
 }
