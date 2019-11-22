@@ -2,16 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using System;
 
 public class UGT : MonoBehaviour
 {
-    double c = 0;
-    int h = 0;
+    int c = 0;
    public void SetTest(string text)
     {
-        c = GameObject.Find("Numbers_upgrade").GetComponent<Number>().UBNL;
-        h = Convert.ToInt32()
+        c = GameObject.Find("Numbers").GetComponent<Number>().UBNL;
         TextMeshProUGUI txt = transform.Find("Text (TMP)").GetComponent<TextMeshProUGUI>();
-        txt.text = "Upgrade Number Button ( " + c + " Numbers)";
+        txt.text = "Upgrade Number Button (" + c + " Numbers)";
     }
 }

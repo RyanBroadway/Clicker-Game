@@ -2,13 +2,15 @@
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using System;
 
 public class Number : MonoBehaviour
 {
     private int Numbers = 0;
     private bool Spam = false;
     private int amount = 1;
-    public double UBNL = 0;
+    private double cost = 0;
+    public int UBNL = 50;
 
     public void Start()
     {
@@ -25,11 +27,12 @@ public class Number : MonoBehaviour
     }
     public void OnclickU()
     {
-        if (Numbers >= 50)
+        if (Numbers >= UBNL)
         {
             amount += 1;
-            Numbers -= 50;
-            UBNL = (50 * 1.5^(amount - 1));
+            Numbers -= UBNL;
+            cost = 50 * Math.Pow(1.5,amount - 1);
+            UBNL = Convert.ToInt32(cost);
         }
     }
     IEnumerator Timer()
