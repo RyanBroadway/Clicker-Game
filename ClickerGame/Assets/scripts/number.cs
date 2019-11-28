@@ -31,7 +31,7 @@ public class Number : MonoBehaviour
         {
             amount += 1;
             Numbers -= UBNL;
-            cost = 50 * Math.Pow(1.5,amount - 1);
+            cost = 50 * Math.Pow(1.2,amount - 1);
             UBNL = Convert.ToInt32(cost);
         }
     }

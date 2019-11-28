@@ -11,6 +11,7 @@ public class UGT : MonoBehaviour
     {
         c = GameObject.Find("Numbers").GetComponent<Number>().UBNL;
         TextMeshProUGUI txt = transform.Find("Text (TMP)").GetComponent<TextMeshProUGUI>();
-        txt.text = "Upgrade Number Button (" + c + " Numbers)";
+        txt.text = @"Upgrade Number Button
+(" + c + " Numbers)";
     }
 }
