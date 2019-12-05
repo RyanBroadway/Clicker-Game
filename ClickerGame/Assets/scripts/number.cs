@@ -8,7 +8,7 @@ public class Number : MonoBehaviour
 {
     private int Numbers = 0;
     private bool Spam = false;
-    private int amount = 1;
+    public int amount = 1;
     private double cost = 0;
     public int UBNL = 50;
 
