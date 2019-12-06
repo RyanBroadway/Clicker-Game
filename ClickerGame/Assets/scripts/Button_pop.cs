@@ -13,8 +13,6 @@ public class Button_pop : MonoBehaviour
     void Start()
     {
         Destroy(gameObject, 3);
-        ButPos = (GameObject.Find("Numbers_Button").GetComponent<ButPos>().pos);
-        Debug.Log(ButPos);
     }
     void Update()
     {
@@ -25,11 +23,12 @@ public class Button_pop : MonoBehaviour
     }
     public void OnClick()
     {
+        ButPos = GameObject.Find("Numbers_Button").GetComponent<ButPos>().pos;
         x = Random.Range(-140, 140);
         y = Random.Range(-140, 140);
         canvas = GameObject.Find("Canvas");
         GameObject Text = Instantiate(gameObject);
         Text.transform.parent = canvas.transform;
-        Text.transform.position = new Vector2(ButPos.x, ButPos.y);
+        Text.transform.position = new Vector2((ButPos.x - 50) + x, (ButPos.y + 50) + y);
     }
 }
